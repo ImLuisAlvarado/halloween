@@ -17,7 +17,7 @@ def test_save_inserta_monstruo_en_la_base_de_datos(mock_get_connection):
 
     mock_cursor.execute.assert_called_once_with(
         "INSERT INTO monster (name, power) VALUES (%s, %s)",
-        ("Godzilla", "9000"),
+        ("Godzilla", 9000),
     )
     mock_connection.commit.assert_called_once()
     mock_cursor.close.assert_called_once()
